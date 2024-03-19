@@ -20,9 +20,14 @@ def is_valid(ex_plate):
 
 def letters_in_mid(plate):
     array_lenght = len(plate) - 1
-    if plate[2:array_lenght].isnumeric() == True and plate[array_lenght].isalpha() == True:
-        return False
+    if plate[array_lenght].isalpha() == True:
+        for i in plate[2:array_lenght-1]:
+            if i.isnumeric() == True:
+                break
+        return False    
     else:
         return True
-
+    
+        
+        
 main()
