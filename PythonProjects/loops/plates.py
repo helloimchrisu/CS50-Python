@@ -20,13 +20,13 @@ def is_valid(ex_plate):
 
 def letters_in_mid(plate):
     array_lenght = len(plate) - 1
-    if plate[array_lenght].isalpha() == True:
-        for i in plate[2:array_lenght-1]:
-            if i.isnumeric() == True:
-                break
-        return False    
-    else:
-        return True
+    plate_list = list(plate)
+    for s in plate_list:
+        if s[0:array_lenght-1].isnumeric() == True and plate[array_lenght].isalpha() == True:
+            return False
+            
+
+
     
         
         
