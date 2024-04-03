@@ -17,6 +17,7 @@ fruits = [
 
 
 user_fruit = input("Item: ")
-if user_fruit in fruits:    
-    print(fruits[user_fruit])
-        
+for fruit in fruits:
+        if user_fruit in fruit["name"]:
+            print(fruit["kcal"])
+            break
