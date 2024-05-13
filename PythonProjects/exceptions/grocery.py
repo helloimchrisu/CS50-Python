@@ -7,5 +7,5 @@ try:
             i = i+1
 
 except EOFError:
-    for _ in grocery_list:
-         print(grocery_list[shopping_item])
+    for item in grocery_list.values():
+        print(item)
