@@ -2,7 +2,7 @@ import json
 import requests
 import sys 
 
-#if no song and band exit   
+#if no song and band exit    
 if len(sys.argv) != 2:
     sys.exit()
 

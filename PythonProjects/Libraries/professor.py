@@ -4,13 +4,19 @@ import random
 def main():
     difficulty = get_level()
     while True:
-        x,y = generate_integer(difficulty)
-        answ = x + y
-        user_answ = int(input(f"{x} + {y} = "))
-        if user_answ == answ: 
-            print("yes!")
-        else:
-            print("no!")
+        try:
+            chances = 3
+            x,y = generate_integer(difficulty)
+            answ = x + y
+            user_answ = int(input(f"{x} + {y} = "))
+            if user_answ != answ:
+                chances = chances - 1 
+                raise ValueError                
+        except ValueError:
+            print("EEE")
+            pass
+
+             
 
 
 def get_level():
