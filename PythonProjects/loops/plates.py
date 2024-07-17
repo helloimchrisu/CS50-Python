@@ -25,9 +25,5 @@ def letters_in_mid(plate):
         if s[0:array_lenght-1].isnumeric() == True and plate[array_lenght].isalpha() == True:
             return False
             
-
-
-    
-        
-        
-main()
+if __name__ == "__main__":   
+    main()
