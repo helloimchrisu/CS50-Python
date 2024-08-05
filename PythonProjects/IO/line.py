@@ -8,12 +8,13 @@ def main():
 
 
 def how_many(name):
-    
     with open(str(name), "r") as file:
-        row = 0
-        for _ in file:
-            row + 1
-        return str(row)
+        lines = file.readlines() 
+        line_count = len(lines) 
+        for line in file:
+            if line.startswith("#"):
+                line_count - 1
+            return line_count
 
 
 
